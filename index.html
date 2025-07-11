@@ -54,12 +54,12 @@
 </head>
 <body>
   <div class="error-text">
-Uncaught TypeError: Cannot read properties of undefined (reading 'model')
-    at synapseAI.load (archive.js:27:15)
-    at Object.<anonymous> (archive.js:54:3)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
-    at Module.load (internal/modules/cjs/loader.js:653:32)
+Traceback (most recent call last):
+  File "synapse_ai/archive_loader.py", line 42, in &lt;module&gt;
+    model = ai.load_model('synapse_v2')
+  File "synapse_ai/core/loader.py", line 15, in load_model
+    with open(resource_path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'assets/models/synapse_v2.pt'
   </div>
 
   <div>
