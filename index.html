@@ -13,19 +13,33 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-family: sans-serif;
+      font-family: monospace;
       font-size: 18px;
       color: #333;
       text-align: center;
       padding: 0 20px;
       position: relative;
       box-sizing: border-box;
+      flex-direction: column;
     }
     .footer {
       position: fixed;
       bottom: 20px;
       right: 20px;
       font-size: 16px;
+    }
+    .error {
+      background: black;
+      color: lime;
+      padding: 10px 20px;
+      font-size: 14px;
+      width: 90%;
+      max-width: 600px;
+      text-align: left;
+      margin-top: 20px;
+      font-family: monospace;
+      border: 2px solid lime;
+      box-shadow: 0 0 20px lime;
     }
     @media (max-width: 480px) {
       body {
@@ -37,6 +51,10 @@
         right: 10px;
         bottom: 10px;
       }
+      .error {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
     }
   </style>
 </head>
@@ -47,8 +65,17 @@
     It started on 24 February 2022 and concluded on 21 May 2024.<br>
     This journey has brought valuable experiences, and I sincerely thank everyone who contributed and supported it.<br>
     All assets within this website have been removed, leaving only plain HTML and text.<br><br>
-   
   </div>
+
+  <div class="error">
+    Uncaught TypeError: Cannot read properties of undefined (reading 'model')<br>
+    &nbsp;&nbsp;&nbsp;at synapseAI.load (archive.js:27:15)<br>
+    &nbsp;&nbsp;&nbsp;at Object.<anonymous> (archive.js:54:3)<br>
+    &nbsp;&nbsp;&nbsp;at Module._compile (internal/modules/cjs/loader.js:778:30)<br>
+    &nbsp;&nbsp;&nbsp;at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)<br>
+    &nbsp;&nbsp;&nbsp;at Module.load (internal/modules/cjs/loader.js:653:32)
+  </div>
+
   <div class="footer">由 Phuwadet.C（AI工程师）开发</div>
 </body>
 </html>
